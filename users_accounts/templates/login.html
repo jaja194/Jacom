@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+<div class="jacom_login_header">
+    <header>
+        <div class="homeicon_login">
+            <a href="{% url 'users_accounts:homepage' %}"><img src="{% static './images/Jacom_logo2.png' %}" height="100px" width="120px"></a>
+        </div>
+    </header>
+    <div class="welcome-login">
+        <h1>Welcome Back to Jacom</h1>
+    </div>
+    
+    <div class="jacom_login">
+       <div class="jacom_login_form">
+        <h3>Log In to Your Jacom Account</h3>
+        <div class="login_form_image">
+            <img src="{% static './images/jacom_lady_login2.jpg' %}">
+        </div>
+        <form method='post'>
+            {% csrf_token %}
+            <!-- {{ form.as_p }} -->
+            <label for="">Username:
+                <input type="text" name="username" placeholder="Username" required />
+            </label>
+            <br>
+            <label for="">Password:
+                <input type="password" name="password" placeholder="Password" required />
+            </label>
+            <p>Forget Password Click <a href="{% url 'users_accounts:reset_password' %}">here</a></p>
+            <button type="submit">Log In</button>
+       </div>
+            <div class="jacom_login_new">
+                <p>
+                    New to JACOM
+                </p>
+                    <p>Don't have an account? <a href="{% url 'users_accounts:signup' %}">Sign up</a>
+                    <br>It's free and takes just a few seconds to create an account.
+                </p>
+            </div>
+        </form>
+    </div>    
+</div>
+
+<div class="jacom_login_img">
+    <img src="{% static './images/jacom_lady_login1.jpg' %}">
+    <div class="why_choose_jacom">
+        <p>Why Choose JACOM?</p>
+        <li>Effortless Collaboration: Connect with skilled workers or clients seamlessly. Our platform
+            <br>simplifies the process, making it easy to find the right match for your project.
+        </li>
+        <br>
+        <li>Verified Professionals: All skilled workers on our platform are vetted and verified,
+            <br>ensuring top-notch quality and reliability.
+        </li>
+        <br>
+        <li>Secure Transactions: We prioritize your security. Enjoy safe and secure
+            <br>transactions between clients and skilled workers.
+        </li>
+    </div>
+    <div class="jacom_login_trouble">
+        <p>Trouble Logging In?</p>
+            If you're experiencing issues logging in, please contact our support team for 
+            <br>assistance.
+            <button><a href="{% url 'users_accounts:contact' %}">Contact Support</a></button>
+    </div>
+</div>
+
+
+
+<!-- <div>
+    <img src="{% static './images/jacom_lady_login3.jpg' %}">
+    <img src="{% static './images/jacom_lady_login4.jpg' %}">
+</div> -->
+
+
+
+{% endblock %}

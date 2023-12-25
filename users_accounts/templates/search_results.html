@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+
+<!-- <h2>Search Results</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+    {% for result in results %}
+    <li>{{ result.title }}</li>
+    {% endfor %}
+</ul> -->
+
+<div>
+    <!-- Display search results here -->
+    {% for result in results %}
+      <h3>{{ result.title }}</h3>
+      <p>{{ result.description }}</p>
+      <!-- Display other item details as needed -->
+    {% empty %}
+      <p>No results found</p>
+    {% endfor %}
+  </div>
+
+{% endblock %}

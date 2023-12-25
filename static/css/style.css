@@ -1,0 +1,1258 @@
+/* @tailwind base;
+
+@tailwind components;
+
+@tailwind utilities; */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+/* start home page css style */
+
+.homeicon{
+    margin-top: -18px;
+}
+
+.headerbar, li{
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+}
+
+.headerbar li a{
+    text-decoration: none;
+    margin-left: 30px;
+    color: black;
+    font-size: large;
+}
+
+.headerlinks{
+    display: flex;
+    margin-top: 18px;
+    margin-left: 20%;
+}
+
+.headerlinkstwo{
+    display: flex;
+    margin-top: 20px;
+    position: absolute; top: 0px; right: 20px;
+}
+
+.section-one{
+    background-color: ;
+    margin-top: -20px;
+    height: 600px;
+}
+
+.section-content-one{
+    position: absolute; top: 180%; left: 230px;
+    font-size: xx-large;
+}
+
+.section-content-two{
+    position: absolute; top: 500%; left: 150px;
+    font-size: 20px; font-weight: 500; font-family: sans-serif;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.img-home-one{
+    display: flex;
+    position: absolute; top: 240%; right: 60px;
+    height: 270px;
+    width: 400px;
+}
+
+.section-hold{
+    text-align: center;
+    position: relative; top: 40px;
+}
+
+.section-two-of-home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family:   sans-serif;
+    background-color: rgb(174, 217, 235);
+    border-radius: 40px;
+    margin-left: 60px; margin-right: 60px;
+    height: 500px;
+    margin-top: 40px;
+    
+}
+
+.why-choose-us{
+    text-align: center;
+    margin-top: 40px;
+    
+}
+
+.box-one{
+    font-size: 20px;
+    width: 450px;
+    
+}
+
+.box-two{
+    font-size: 20px;  
+    width: 450px;
+
+    
+}
+
+.box-two-kid{
+    margin-top: 69px;
+}
+
+.section-three-of-home{
+    display: flex;
+    color: black;
+    height: 400px;
+    margin-top: 130px;
+    font-size: larger;
+    font-family:  sans-serif;
+}
+
+.join-us-link a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.join-us-link button{
+    background-color: blue;
+    padding: 10px;
+    border-radius: 30px;
+    border: 0;
+}
+
+.join-us-today{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.how-it-works{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    height: 550px;
+}
+
+.how-it-works-one{
+    margin-left: 90px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.how-it-work{
+    margin-left: 200px;
+    margin-top: 150px;
+    font-size: 20px;
+    font-weight: 200px;
+    background-color: rgb(174, 217, 235);
+    height: 300px;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.traditional{
+    display: grid;
+    flex-direction: row;
+    margin-top: 120px;
+}
+
+.traditional-img img{
+    height: 250px;
+    border-radius: 200px;
+    margin-left: 120px;
+    margin-top: 80px;
+}
+
+.traditional-one{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: larger;
+    font: 1.1em sans-serif;
+    color: rgb(204, 35, 35);
+}
+
+.traditional-img-one img{
+    height: 250px;
+    border-radius: 200px;
+    margin-left: 120px;
+    margin-top: -60px;
+}
+
+.traditional-img-two img{
+    height: 250px;
+    border-radius: 200px;
+    margin-left: 820px;
+    margin-top: -60px;
+}
+
+.traditional-two{
+    height: 250px;
+    border-radius: 200px;
+    margin-left: 150px;
+    margin-top: -60px;
+    font: 1.1em sans-serif;
+    font-size: larger;
+    font-weight: 600;
+    color: rgb(204, 35, 35);
+}
+
+.motivated{
+    background-color: aliceblue;
+    height: 700px;
+}
+
+.motivated div{
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 10px;
+}
+
+.motivated-one{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.motivated-two{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.motivated-box-one{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+
+.Testimonials{
+    height: 400px;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: aliceblue;
+    margin-top: 70px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.section-img{
+    margin-top: 120px;
+    background-color:rgb(174, 217, 235) ;
+    height: 600px;
+}
+
+.section-img-hold{
+    margin-top: 50px;
+    position: relative; top: 50px;
+}
+
+.section-img-one{
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.section-img-two{
+    margin-top: -30px;
+    margin-left: 650px;
+}
+
+.connect{
+    margin-top: 80px;
+    background-color: steelblue;
+    border-radius: 40px;
+    height: 1030px;
+
+}
+
+.connected{
+    position: relative;
+    top: 50px;
+    margin-left: 150px;
+}
+
+.connect-one{
+    font-size: 20px;
+}
+
+.connect-two{
+    position: relative;
+    top: 80px;
+    margin-left: 150px;
+}
+
+.connect-two button{
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    border: 0;
+}
+
+.connect-two p{
+    font-size: 20px;
+}
+
+.connect-two a{
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.connected-img img{
+    height: 300px;
+    width: 450px;
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+.connect-three{
+    position: relative;
+    margin-left: 150px;
+}
+
+.connect-three p{
+    font-size: 20px;
+}
+
+.connect-link button{
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+    border: 0;
+}
+
+.connect-link a{
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* end home page css style */
+
+/* start login page css style */
+.homeicon_login{
+    margin-left: 40px;
+}
+
+.welcome-login{
+    text-align: center;
+    font-size: larger;
+    margin-top: -30px;
+}
+
+.jacom_login{
+    text-align: center;
+    background-color: steelblue;
+    height: 400px;
+    width: 350px;
+    border-radius: 15px;
+    position: relative;
+    left: 50%;
+    border-color: rgb(174, 217, 235);
+}
+
+.jacom_login_new{
+    margin-top: 110px;
+}
+
+.jacom_login_form{
+    position: relative;
+    top: 40px;
+    margin-left: 200px;
+}
+
+.jacom_login_form form{
+    margin-top: -300px;
+    margin-left: -200px;
+}
+
+.jacom_login_form h3{
+    margin-left: -200px;
+}
+
+.login_form_image img{
+    height: 400px;
+    width: 350px;
+    border-radius: 15px;
+}
+
+.login_form_image{
+    margin-left: -867px;
+    margin-top: -82px;
+}
+
+.jacom_login_form a{
+    text-decoration: none;
+    color: rgb(174, 217, 235);
+}
+
+.jacom_login_new a{
+    text-decoration: none;
+    color: rgb(174, 217, 235);
+}
+
+.jacom_login_form button{
+    background-color: white;
+    padding: 7px;
+    border-radius: 30px;
+    border: 0;
+    color: steelblue;
+}
+
+.jacom_login_img img{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    border-radius: 400px;
+    margin-left: 850px;
+    position: relative;
+    top: 50px;
+}
+
+.jacom_login_img{
+    margin-top: 90px;
+    position: relative;
+    background-color: steelblue;
+    height: fit-content;
+}
+
+.why_choose_jacom{
+    position: relative;
+    top: -260px;
+    margin-left: 80px;
+    font-size: large;
+    font-weight: 600;
+    
+}
+
+.jacom_login_trouble p{
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.jacom_login_trouble button{
+    background-color: black;
+    padding: 10px;
+    border-radius: 30px;
+    border: 0;
+}
+
+.jacom_login_trouble a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.jacom_login_trouble{
+    font-size: larger;
+    margin-left: 80px;
+}
+
+/* start signup css style */
+
+.container{
+    display: flex;
+}
+
+.column{
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: steelblue;
+}
+
+.column_two{
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(174, 217, 235);
+}
+
+.column_two h1{
+    margin-left: 30px;
+    text-align: center;
+}
+
+.signup_form{
+    text-align: center;
+    background-color: rgb(174, 217, 235);
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+    left: 15%;
+    border-color: rgb(174, 217, 235);
+    padding: 10px;
+}
+
+.create_your_account{
+    font-size: larger;
+    margin-top: 30px;
+}
+
+.jacom_signup_form{
+    margin-top: 50px;
+}
+
+.jacom_signup_form a{
+    text-decoration: none;
+    color: blue;
+    font-size: 17px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-top: 50px
+}
+
+.slide a{
+    text-decoration: none;
+    color: blue;
+    font-size: large;
+}
+
+.slide_button button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev {
+    left: 0px;
+     margin-top: 80px;
+}
+  
+.next {
+    right: 10px;
+    margin-top: 80px;
+}
+
+/* end signup css style */
+
+/* start dashboard css style */
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row{
+    margin-top: -15px;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.header{
+    color: yellow;
+    padding: 0px;
+    margin-left: 40px;
+    display: flex;
+    margin-top: -2px;
+}
+
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.menu li{
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: rgb(174, 217, 235);
+    color: black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: block;
+}
+
+.menu li:hover{
+    background-color: steelblue;
+}
+
+.aside{
+    background-color: steelblue;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.aside li{
+    margin-top: -15;
+}
+
+.aside-2{
+    background-color: steelblue;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.aside-3{
+    background-color: steelblue;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    position: relative; left: 0px;
+}
+
+.menu p{
+    margin: 20px;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: rgb(174, 217, 235);
+    color: black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: block;
+}
+
+.menu h2{
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: rgb(174, 217, 235);
+    color: black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: block;
+}
+
+.row a{
+    text-decoration: none;
+    color: blue;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search{
+    margin-top: 80px;
+    margin-left: 0;
+}
+
+.search a{
+    font-size: 13px;
+    font-weight: 100;
+    color: rgb(51, 50, 50);
+}
+
+@media only screen and (min-width: 768px){
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/* end dashboard css style */
+
+/* start FAQ css style */
+.faq-page{
+    background-color: steelblue;
+    font-size: 20px;
+}
+
+.faq-page a{
+    text-decoration: none;
+    color: rgb(174, 217, 235);
+}
+
+.container-faq{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+
+.container-faq h1{
+    text-align: center;
+}
+
+.container-faq img{
+    border-radius: 10px;
+    height: 300px;
+    width: 400px;
+}
+
+.column-1{
+    padding: 20px;
+    border: 1px solid steelblue;
+    margin: 200px;
+    background-color: rgb(174, 217, 235);
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+
+.column-2{
+    padding: 20px;
+    border: 1px solid rgb(174, 217, 235);
+    background-color: aliceblue;
+    margin: 200px;
+    border-radius: 10px;
+    margin-top: -180px;
+}
+
+/* end FAQ css style */
+
+/* start contact support css style */
+
+.contact-container{
+    background-color: rgb(174, 217, 235);
+}
+
+.contact-box1{
+    text-align: center;
+    font-size: 20px;
+    position: relative; top: 40px;
+}
+
+.container-customer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.column-customer1{
+    padding: 20px;
+    margin: 40px;
+    margin-left: 90px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    height: 450px;
+    width: 370px;
+}
+
+.column-customer1 p{
+    font-size: 20px;
+}
+
+.column-customer2{
+    padding: 20px;
+    margin: 20px;
+}
+
+.column-customer2 img{
+    height: 350px;
+    width: 480px;
+    border-radius: 10px;
+}
+
+.business-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: aliceblue;
+}
+
+.column-business1{
+    padding: 20px;
+    border: 20px;
+    margin: 20px;
+    margin-left: 100px;
+    font-size: 18px;
+}
+
+.column-business1 img{
+    border-radius: 30px;
+    height: 250px;
+}
+
+.appreciatetion{
+    font-size: 20px;
+    color: steelblue;
+}
+
+.contact-back a{
+    text-decoration: none;
+    font-size: 17px;
+    font: bold;
+}
+
+/* end contact support css style */
+
+/* start functioning css style */
+
+.functioning-body{
+    background-color: rgb(174, 217, 235);
+}
+
+.functioning-body img{
+    height: 250px;
+    width: 250px;
+    border-radius: 200px;
+}
+
+.functioning-header{
+    text-align: center;
+    position: relative; top: 50px;
+    font-size: 20px;
+}
+
+.functioning-section{
+    font-size: 18px;
+    position: relative; top: -625px;
+    margin: 20px;
+    padding: 20px;
+    border: 20px;
+
+}
+
+.functioning-section2{
+    background-color: steelblue;
+    margin-top: -600px;
+    padding: 50px;
+}
+
+.section2-content{
+    border: 200px;
+}
+
+.function-images{
+    margin: 100px;
+    margin-left: 750px;
+}
+
+.function-image1{
+    margin-left: 80px;
+}
+
+.function-image2{
+    margin-left: 240px;
+    margin-top: -120px;
+}
+
+.function-image3{
+    margin-left: 80px;
+    margin-top: -150px;
+}
+
+.functioning-section3{
+    font-size: 20px;
+    font: bold;
+    margin: 60px;
+    padding: 20px;
+}
+
+.functioning-section3 a{
+    text-decoration: none;
+    font: bold;
+    color: blue;
+}
+
+.functioning-section2-images{
+    margin-left: 680px;
+    margin-top: -530px;
+}
+
+.function-sec2-img1 img{
+    height: 300px;
+    border-radius: 30px;
+    width: 350px;
+}
+
+.function-sec2-img2 img{
+    height: 300px;
+    border-radius: 30px;
+    width: 350px;
+    margin-left: 80px;
+    margin-top: -20px;
+}
+
+/* end functioning css style */
+
+/* start about css style */
+.about_body{
+    background-color: rgb(174, 217, 235);
+    text-align: center;
+    font-family: cursive;
+}
+
+.container-about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.text-overlay-about-content1{
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 505;
+}
+
+.about-grid1{
+    background-color: steelblue;
+    margin: 40px;
+    width: 450px;
+    margin-left: 60px;
+    margin-top: 0px;
+    position: relative;
+    height: 100%;
+}
+
+.about-image1 img{
+    width: 450px;
+    left: 0px;
+    top: -190px;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+
+.about-grid2{
+    background-color: steelblue;
+    width: 770px;
+    margin: 30px;
+    margin-top: 100px;
+    margin-left: -50px;
+}
+.text-overlay-about-content2{
+    position: relative;
+    top: 70px;
+    margin: 25px;
+    border: 10px;
+    padding: 20px;
+    margin-left: 150px;
+    height: 400px;
+    margin-right: 0px;
+    background-color: rgb(174, 217, 235);
+}
+
+.text-overlay-about-content3{
+    position: absolute;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    left: 50%;
+}
+
+.text-overlay-about-content3 button{
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 100px;
+}
+
+.text-overlay-about-content3 a{
+    text-decoration: none;
+    color: steelblue;
+    font-weight: 585;
+}
+
+
+.about-image2 img{
+    width: 450px;
+    height: 500px;
+    margin-right: 190px;
+    margin-top: 145px;
+    object-fit: cover;
+    filter: blur(1px) brightness(0.7);
+}
+
+.about-image3 img{
+    width: 240px;
+    height: 160px;
+}
+
+.about-image3{
+    display: flex;
+    margin: 30px;
+    margin-left: -20px;
+}
+
+.about-box1{
+    margin-left: 22px;
+}
+
+.about-box1 p{
+    margin-top: -12px;
+}
+
+.about-image4 img{
+    width: 770px;
+    left: 0px;
+    top: -190px;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.text-overlay-about-content4{
+    position: absolute;
+    top: 110%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 505;
+}
+
+.container-difference{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content5-box1{
+    background-color: rgb(174, 217, 235);
+    margin: 40px;
+}
+
+.about-image5 img{
+    width: 770px;
+    left: 0px;
+    top: -190px;
+    object-fit: cover;
+    filter: brightness(0.5);
+    margin-top: 50px;
+}
+
+.text-overlay-about-content6{
+    position: absolute;
+    top: 330%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 505;
+}
+
+.text-overlay-about-content7{
+    position: relative;
+    top: 200px;
+    margin: 25px;
+    border: 10px;
+    padding: 20px;
+    margin-left: 50px;
+    height: 400px;
+    margin-right: 0px;
+    background-color: rgb(174, 217, 235);
+}
+
+/* start profile page css style */
+
+.profile-container{
+    background-color: rgb(174, 217, 235);
+}
+
+.profile-contents{
+    margin-top: -50px;
+}
+
+.profile-image1 img{
+    width: 1347px;
+    height: 400px;
+    left: 0px;
+    top: -190px;
+    object-fit: cover;
+    filter: brightness(0.5);
+    margin-top: 50px;
+}
+
+.profile-layout{
+    text-align: center;
+    position: relative;
+    top: -320px;
+}
+
+.profile-layout h2{
+    position: relative;
+    top: -80px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile-username{
+    position: relative;
+    top: -280px;
+    text-align: center;
+    color: white;
+}
+
+.profile-information{
+    margin-top: -230px;
+    margin-left: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.profile-container a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.profile-container button{
+    background-color: aliceblue;
+    border: 0; padding: 0;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.profile-logout{
+    margin-left: 120px;
+    margin-top: -15px;
+}
+
+.profile-details{
+    width: 400px;
+    margin: 15px;
+    padding: 15px;
+    border: 15px;
+}
+
+.profile-details li{
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: rgb(174, 217, 235);
+    color: black;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: block;
+}
+
+.profile-details li:hover{
+    background-color: steelblue;
+}
+
+.profile-dashboardlink{
+    position: relative;
+    top: -660px;
+    margin-left: 1190px;
+}
+
+/* end of profile css style */
+
+
+/* start of create profile css style */
+.update-body{
+    margin: 10px;
+    background-size: cover;
+}
+.update-profile{
+    background-color: rgb(110, 191, 226);
+    text-align: center;
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 30%;
+    position: relative;
+}
+
+/* .update-img-profile img{
+    height: 820px;
+    width: 1000px;
+    position: relative;
+    margin-left: 13%;
+} */
+
+/* end create profile css style */
+
+/* start terms and service css style */
+
+.terms-container{
+    background-color: rgb(174, 217, 235);
+    height: fit-content;
+    text-align: center;
+}
+
+
+.terms-content{
+    margin-right: 20px; /* Adjust the margin between text */
+    width: 600px;
+    margin-left: 347px;
+}
+
+
+/* start footer css style */
+.site-footer {
+    background-color: #f4f4f4;
+    padding: 30px 0;
+    color: #333;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: -35px;
+    margin-left: 500px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+.Copyright-info{
+    margin-top: 30px;
+}
+
+/* end footer css style */

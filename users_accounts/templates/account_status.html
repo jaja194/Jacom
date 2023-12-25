@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+
+<h1>Account Status</h1>
+<p>Verified: {% if user_profile.is_verified %}Yes{% else %}No{% endif %}</p>
+<p>Active: {% if user_profile.is_active %}Yes{% else %}No{% endif %}</p>
+
+{% endblock %}

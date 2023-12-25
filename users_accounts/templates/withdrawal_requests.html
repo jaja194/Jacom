@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+
+<h1>Withdrawal Request</h1>
+
+{% for request in pending_withdrawal_requests %}
+{{ request.amount }}
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="faq-page">
+    
+    <div class="container-faq">
+        <div class="column-1">
+            <h1>How can we help you?</h1>
+            <h3>General Questions</h3>
+            <div>
+                <img src="{% static './images/jacom_faq1.jpg' %}">
+            </div>
+            <p>
+                Q1: What is JACOM
+                <br>
+                <br>
+                A: JACOM is an online marketplace that connects skilled workers with clients
+                <br>looking for their expertise. Whether you're a skilled artisan, technician, designer, or
+                <br>professional in any field, our platform helps you find clients or projects that match your skills.
+                <br>
+                <br>
+                Q2: How does JACOM work?
+                <br>
+                <br>
+                A: Clients can post projects and browse profiles of skilled workers. Skilled workers can
+                <br>create profiles, showcase their expertise, and connect with clients. The platform facilitates
+                <br>communication, collaboration, and secure transactions between clients and skilled workers.
+            </p>
+        
+            <div>
+                <img src="{% static './images/jacom_faq2.jpg' %}">
+            </div>
+            <h3>For Clients</h3>
+            <p>
+                Q3: How do I find a skilled worker for my project?
+                <br>
+                <br>
+                A: You can search for skilled workers using our search filters based on skills, location,
+                <br>ratings, and more. Browse through profiles, review portfolios, and message skilled workers
+                <br>directly to discuss your project requirements.
+                <br>
+                <br>
+                Q4: Is there a cost to post a project or hire a skilled worker?
+                <br>
+                <br>
+                A: Posting a project is free. Fees apply only when you hire a skilled worker. The specific fees
+                <br>and payment details are outlined during the hiring process.
+            </p>
+    
+        </div>
+    
+        <div class="column-2">
+            <h3>For Skilled Workers</h3>
+            <p>
+                Q5: How do I create a profile on JACOM?
+                <br>
+                <br>
+                A: To create a profile, sign up for an account and complete your profile with details about
+                <br>your skills, experience, and portfolio. Make sure to showcase your expertise and
+                <br>certifications to attract potential clients.
+                <br>
+                <br>
+                Q6: Can I showcase my previous work on my profile?
+                <br>
+                <br>
+                A: Yes, absolutely! You can showcase your previous work, projects, certifications, and
+                <br>testimonials on your profile to demonstrate your skills and expertise to potential clients.
+            </p>
+
+            <div>
+                <img src="{% static './images/jacom_faq3.jpg' %}">
+            </div>
+        
+            <h3>Payments and Security</h3>
+            <p>
+                Q7: How are payments processed on JACOM?
+                <br>
+                <br>
+                A: Payments between clients and skilled workers are processed securely through our
+                <br>platform. We offer multiple payment options to ensure a convenient and safe transaction
+                <br>experience.
+                <br>
+                <br>
+                Q8: Is my personal information secure?
+                <br>
+                <br>
+                A: Yes, we take data security seriously. Your personal information is encrypted and stored
+                <br>securely. We follow industry-standard security practices to protect your data.
+            </p>
+    
+            <div>
+                <img src="{% static './images/jacom_faq4.jpg' %}">
+            </div>
+        
+            <h3>Getting Help</h3>
+            <p>
+                Q9: How do I contact customer support?
+                <br>
+                <br>
+                A: If you need assistance or have any questions, you can contact our customer support team
+                <br>via email at <a href="{% url 'users_accounts:contact' %}">Support Email</a>, phone at <a href="{% url 'users_accounts:contact' %}">Support Phone Number</a>, or through our <a href="{% url 'users_accounts:contact' %}">Contact Us</a> page.
+                <br>
+                <br>
+                Q10: What if I have a dispute with a client/skilled worker?
+                <br>
+                <br>
+                A: We have a dispute resolution process in place. If you encounter any issues, please contact
+                <br> our support team, and we will assist you in resolving the dispute.
+            </p>
+        </div>
+    </div>
+
+</div>
+{% include 'footer.html' %}
+
+{% endblock %}

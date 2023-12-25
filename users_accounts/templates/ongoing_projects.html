@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+
+<h1>Ongoing Projects</h1>
+<ul>
+    {% for project in ongoing_projects %}
+        <li>
+            <h3>{{ project.title }}</h3>
+            <p>Status: {{ project.status }}</p>
+            <p>Client: {{ project.client }}</p>
+            <p>Deadline: {{ project.deadline }}</p>
+            <!-- Add link to messages or display number of messages -->
+            <p>Messages: <!-- Display number of messages --></p>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

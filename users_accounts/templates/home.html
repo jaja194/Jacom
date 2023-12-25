@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+<div>
+    
+    <div class="site">
+        <header>
+            <ul class="headerbar">
+                <div class="homeicon">
+                    <a href="{% url 'users_accounts:homepage' %}"><img src="{% static './images/Jacom_logo2.png' %}" height="100px" width="120px"></a>
+                </div>
+                <div class="headerlinks">
+                    <li>
+                        <form action="{% url 'users_accounts:search' %}" method="GET">
+                        <input type="text" name="q" placeholder="Search...">
+                        <button type="submit">Search</button>
+                        </form>
+
+                        {% if results %}
+                            <h2>Search Results</h2>
+                            <ul>
+                                {% for results in results %}
+                                <li>{{ user.profile_pictures }}</li>
+                                <li>{{ user.title }}</li>
+                                <li>{{ user.first_name }}</li>
+                                <li>{{ user.last_name }}</li>
+                                <li>{{ user.work_bio }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+
+                        <!-- <div>
+                            <h1>User Search</h1>
+                        <form method="get" action="{% url 'users_accounts:user_search' %}">
+                            <input type="text" name="search_query" placeholder="Enter skilled worker title">
+                            <button type="submit">Search</button>
+                        </form>
+                        
+                        {% if users %}
+                            <h2>Search Results</h2>
+                            <ul>
+                                {% for user in users %}
+                                <li>{{ user.title }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        </div> -->
+                    </li>
+                    <li><a href="{% url 'users_accounts:about' %}">About Us</a></li>
+                    <li><a href="{% url 'users_accounts:contact' %}">Contact Us</a></li>
+                </div>
+                <div class="headerlinkstwo">
+                    <li><a href="{% url 'users_accounts:login' %}">Log in</a></li>
+                    <li><a href="{% url 'users_accounts:signup' %}">Sign up</a></li>
+                </div>
+            </ul>
+        </header>
+    </div>
+
+    <div class="section-one">
+        <section class="section-hold">
+            <h1>WELCOME TO JACOM</h1>
+            <h3>Connecting Skilled Workers with Clients, Seamlessly.</h3>
+        <div class="section-two">
+            <div class="section-content-one">
+                <h1>Find, Hire, & Pay <br> All In One App</h1>
+            </div>
+            <div class="section-content-two">
+                <p>
+                    Jacom is where talent meets opportunity. We bridge the gap between
+                    <br>skilled professionals and clients in need of their expertise. Whether
+                    <br>you're a skilled artisan, a tech whiz, a creative genius, or a professional
+                    <br>in any field, we have the perfect match for your needs.
+                </p>
+            </div>
+            <div class="img-home-one">
+                <img src="{% static './images/jacom_typing.webp' %}" style="border-radius: 10px;">
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <div>
+        <h1 class="why-choose-us">
+            Why Choose Us?
+        </h1>
+
+    <div class="section-two-of-home">
+        <div class="box-one">
+            <ul>
+            <div>
+                <h3>
+                    <li>Diverse Talent Pool:</li>
+                </h3>
+                <p>
+                    Explore a wide array of skilled workers, from artisans, craftsmen, and technicians to
+                    <br>professionals in IT, design, marketing, and more. Whatever your project demands, we have
+                    <br>the talent you seek.
+                </p>
+            </div>
+
+            <div>
+                <h3>
+                    <li>Simple and Efficient:</li>
+                </h3>
+                <p>
+                    Our user-friendly platform simplifies the hiring process. Clients can browse profiles, view
+                    <br>portfolios, and connect with skilled workers effortlessly. Skilled professionals can showcase
+                    <br>their talents, skills, and certifications, making it easy for clients to find them.
+                </p>
+            </div>
+        </div>
+
+        <div class="box-two">
+            <div>
+                <h3>
+                    <li>Secure Transactions:</li>
+                </h3>
+                <p>
+                    We prioritize your security. Our platform offers secure payment gateways, ensuring smooth
+                    <br>and safe transactions for both clients and skilled workers.
+                </p>
+            </div>
+
+            <div class="box-two-kid">
+                <h3>
+                    <li>Outstanding Support:</li>
+                </h3>
+                <p>
+                    Need assistance? Our dedicated support team is available around the clock to address your
+                    <br>queries, assist with technical issues, and ensure your experience on JACOM
+                    <br>is seamless.
+                </p>
+            </div>
+        </ol>
+        </div>
+    </div>
+    </div>
+
+    <div class="section-three-of-home">
+        <div class="join-us-today">
+            <h1>Join Us Today</h1>
+                <p>Ready to find the perfect skilled worker for your project or showcase your talents to the
+                <br>world? Join JACOM today and experience a revolution in connecting talent
+                <br>with opportunities.
+                </p>
+
+            <div class="join-us-link">
+                <button>
+                    <a href="{% url 'users_accounts:signup' %}">GET STARTED</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-it-works">
+
+        <div class="how-it-works-one">
+            <h1>How It Works</h1>
+                <h3>Browse Profiles:</h3>
+                Explore detailed profiles of skilled workers to find the right match for your project.
+            
+                <h3>Connect:</h3>
+                Message and discuss project details directly with the skilled workers. Ask
+                <br>questions, negotiate terms, and finalize the collaboration.
+            
+                <h3>Get the Job Done:</h3>
+                Collaborate, track progress, and receive high-quality work. We facilitate a
+                <br>smooth working relationship between clients and skilled workers.
+        </div>
+
+        <div class="how-it-work">
+            <p>
+                <div>
+                    <li>No Paperwork or Contracts</li>
+                    <br>
+                    <li>No Worker Buyout Fees</li>
+                    <br>
+                    <li>No Need for Resumes or Interviews</li>
+                    <br>
+                </div>
+            
+                <div>
+                    <li>Rate Workers Based on Performance</li>
+                    <br>
+                    <li>10-minute Set Up Process</li>
+                    <br>
+                    <li>Dedicated Client Success Manager</li>
+                </div>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="traditional">
+        <div class="traditional-one">
+            <h2>
+                With an average fill rate of 80%, 
+                <br> you'll never have to worry about 
+                <br> filling your shifts again.
+            </h2>
+
+            <div class="traditional-img">
+                <img src="{% static './images/jacom_two_men_working.webp' %}">
+            </div>
+        </div>
+
+        <div class="traditional-img-one">
+            <img src="{% static './images/jacom_installing_solar.jpg' %}">
+        </div>
+
+        <div class="traditional-img-two">
+            <img src="{% static './images/jacom_home_work.jpg' %}">
+        </div>
+        
+        <div class="traditional-two">
+            <p>
+                Unlike traditional temp agencies, 
+                <br> workers on the Jacom app are 
+                <br> individuals who are ready to hustle 
+                <br> & who choose to work your shifts. 
+                <br> Here are a few things of the 
+                <br> things that set us apart:
+            </p>
+        </div>
+        
+        <div class="motivated">
+            <div class="motivated-one">
+                <div>
+                    <p>
+                        <main class="motivated-box-one">
+                            MOTIVATED WORKERS <br>
+                        </main>
+                        <br>Unlike temp agencies, workers on the Jacom
+                        <br>app choose the shifts they want to work by
+                        <br>logging in and applying to the jobs that seem
+                        <br>interesting and worthwhile for them. 
+                    </p>
+                </div>
+            
+                <div>
+                    <p>
+                        <main class="motivated-box-one">
+                            YOU SEE PHOTOS & RATINGS
+                        </main> <br>
+                        <br>We don't want you to wonder about who 
+                        <br>might show up to your job site or what kind of
+                        <br>a worker they might be. With Jacom, you
+                        <br>have total control over who works your shifts.
+                    </p>
+                </div>
+            </div>
+        
+            <div class="motivated-two">
+                <div>
+                    <p>
+                        <main class="motivated-box-one">
+                            QUICK & EASY SET UP
+                        </main> <br>
+                        <br>Gone are the days of interviews,
+                        <br>paperwork, and week-long hiring processes.
+                        <br> With Jacom, you can post a shift and begin
+                        <br> hiring workers in as little as 24 hours!
+                    </p>
+                </div>
+            
+                <div>
+                    <p>
+                        <main class="motivated-box-one">
+                            YOU SET THE WAGES 
+                        </main><br>
+                        <br>As a business owner, you have complete
+                        <br>control over what you pay your workers.
+                        <br>Jacom allows you to set your own wages
+                        <br>and compensate workers accordingly.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-img">
+        <div class="section-img-hold">
+            <div class="section-img-one">
+                <img src="{% static './images/jacom_man_woman_clap.jpg' %}" style="border-radius: 20px;" >
+            </div>
+            <div class="section-img-two">
+                <img src="{% static './images/jacom_man_woman_stand.jpg' %}" style="border-radius: 20px;" >
+            </div>
+        </div>
+    </div>
+
+    <div class="Testimonials">
+        <h1>What Our Clients Say</h1>
+        <p>[Client Testimonials Slider/Quotes]</p>
+    </div>
+
+    <div class="connect">
+        <div class="connected">
+            <h1>Stay Connected</h1>
+            <div class="connect-one">
+                <p>Follow us on social media for updates, tips, and success stories:</p>
+                <li>Facebook: @Jacom Connect</li>
+                <li>Twitter: @Jacom_connect</li>
+                <li>LinkedIn: Connect Jacom</li>
+                <li>Instagram: @Jacomconnect29</li>
+            </div>
+        </div>
+    
+        <div class="connect-two">
+            <h1>Contact Us</h1>
+            <p>Have questions? Reach out to us at 
+                <button>
+                    <a href="{% url 'users_accounts:contact' %}">Contact Us</a>
+                </button>
+            </p>
+        </div>
+        
+        <div>
+            <div class="connected-img">
+                <img src="{% static './images/jacom_girl_at_work.jpg' %}">
+                <img src="{% static './images/jacom_phone_pic.jpg' %}">
+            </div>
+            
+            <div class="connect-three">
+                <h1>
+                    Try Jacom 
+                    <br>For Free Today.
+                </h1>
+                <p>
+                    No contracts or subscriptions,
+                    <br>no obligations. Just sweet, sweet Jacom.
+                </p>
+                <div class="connect-link">
+                    <button>
+                        <a href="{% url 'users_accounts:contact' %}">GET IN TOUCH</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% include 'footer.html' %}
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+
+<h1>Job Status</h1>
+<ul>
+    {% for user in jobs %}
+        <li>{{ user.title }} - {{ user.status }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

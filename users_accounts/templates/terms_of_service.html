@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="terms-container">
+    <h1>Terms of Service</h1>
+    <div class="terms-content">
+       <hr> <p>{{ tos.contents }}</p>
+    </div>
+</div>
+
+<div class="terms-container">
+    <h1>Accept Terms of Service</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"><a href="{% url 'users_accounts:signup' %}"> Accept</a></button>
+    </form>
+</div>
+
+<!-- <div class="terms-container">
+    <div class="horizontal-line1">
+        <h1>Terms of Service</h1>
+        <p>Welcome to JACOM! By accessing or using our platform, you agree to comply
+            <br> with and be bound by the following Terms of Service. Please read these terms carefully
+            <br> before using our services.</p>
+    </div>
+    
+    
+    <div class="horizontal-line">
+            <div>
+                <h2>
+                    Acceptance of Terms
+                </h2>
+                <p>By accessing or using JACOM, you acknowledge that you have read,
+                    <br>understood, and agree to be bound by these Terms of Service. If you do not agree to these
+                    <br>terms, please do not use our platform.
+                </p>
+            </div>
+            
+            <div>
+                <h2>
+                    User Eligibility
+                </h2>
+                <p>You must be at least 18 years old to use our platform. By using our services, you represent
+                    <br>and warrant that you are of legal age and have the capacity to enter into this agreement.
+                </p>
+            </div>
+    
+            <div>
+                <h2>
+                    User Accounts
+                </h2>
+                <p>You are responsible for maintaining the confidentiality of your account credentials. You
+                    <br>agree to notify us immediately of any unauthorized use of your account.
+                    <br>JACOM reserves the right to suspend or
+                    <br>terminate accounts that are used inappropriately or violate these Terms of Service.
+                </p>
+            </div>
+    
+            <div>
+                <h2>
+                    Platform Use
+                </h2>
+                <p>
+                    <ul>
+                        <li>You agree to use JACOM for lawful purposes only.</li>
+                        <li>You will not post or transmit any content that is abusive, defamatory, obscene, fraudulent, 
+                            <br>or violates the rights of others.
+                        </li>
+                        <li>You will not engage in any activity that could harm, disable, overburden, 
+                            <br>or impair our platform.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+    
+            <div>
+                <h2>
+                    User Conduct
+                </h2>
+                <p>
+                    <ul>
+                        <li>You agree to treat all users with respect and professionalism.</li>
+                        <li>You will not engage in harassment, discrimination, or any form of harmful behavior towards
+                            <br>others on our platform.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+    
+            <div>
+                <h2>
+                    Payments and Transactions
+                </h2>
+                <p>
+                    <ul>
+                        <li>JACOM facilitate transactions between clients and skilled workers.
+                            <br>All payments will be processed securely.
+                        </li>
+                        <li>Users are responsible for their own tax obligations related to payments received
+                            <br>through our platform.
+                        </li>
+                    </ul>
+                </p>
+            </div>
+    
+            <div>
+                <h2>
+                    Dispute Resolution
+                </h2>
+                <p>In the event of a dispute between users, JACOM will attempt to facilitate a
+                    <br>resolution. However, we are not liable for disputes between users.
+                </p>
+            </div>
+    
+            <div>
+                <h2>
+                    Termination
+                </h2>
+                <p>JACOM reserves the right to terminate or suspend any user account at our sole discretion
+                    <br>without notice, for any reason, including but not limited to a breach of these Terms of Service.
+                </p>
+            </div>
+    
+            <div>
+                <h2>
+                    Changes to Terms of Service
+                </h2>
+                <p>JACOM may update these Terms of Service from time to time. We will notify users of any
+                    <br>changes via email or through the platform. Continued use of the platform after
+                    <br>such changes constitutes acceptance of the new Terms of Service.
+                </p>
+            </div>
+    
+            <div>
+                <h2>
+                    Contact Us
+                 </h2>
+                <p>If you have any questions about these Terms of Service, please contact us at:
+                    <br>
+                    <br>
+                    Jacom
+                    <br>
+                    teamjacom@gmail.com
+                    <br>
+                    +234-7068-90-5564
+                    <br>
+                    <br>54 road 4 house 6,
+                    <br>FCT Abuja Lokogoma
+                    <br>Nigeria
+                </p>
+            </div>
+    
+        </ol>
+    </div>
+</div> -->
+
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+
+<div class="homeicon_login">
+    <a href="{% url 'users_accounts:homepage' %}"><img src="{% static './images/Jacom_logo2.png' %}" height="100px" width="120px"></a>
+</div>
+
+<div class="container">
+
+    <div class="column">
+        <h1>Sign Up for Free</h1>
+       <div class="signup_form">
+            <div class="create_your_account">
+                <h2>
+                    Create Your Account
+                </h2>
+            </div>
+        
+            <div class="jacom_signup_form">
+                <form method="post">
+                    {% csrf_token %}
+                    <!-- {{ form.as_p }} -->
+                    <label for="">Username:
+                        <input type="text" name="username" placeholder="Username" required />
+                    </label>
+                    <br>
+                    <label for="">Email:
+                        <input type="email" name="email" placeholder="Email" required>
+                    </label>
+                    <br>
+                    <label for="">Password:
+                        <input type="password" name="password" placeholder="Password" required />
+                    </label>
+                    <p>
+                        By clicking Accept, you agree to our <br> <a href="{% url 'users_accounts:terms_of_service' %}">Terms of Service</a> and <a href="{% url 'users_accounts:privacy&policy' %}">Privacy Policy</a>
+                        <br><input type="checkbox" id="checkButton" onclick="checkButtonClick()">
+                        <label for="checkButton">Accept</label>
+                    </p>
+                    
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="have_an_account">
+                    <p>Have an Account?</p>
+                    <p>Log In<a href="{% url 'users_accounts:login' %}"> Here</a> </p>
+                </div>
+            </div>
+       </div>
+    </div>
+    
+    <div class="column_two">
+        <h1>Join JACOM and Unlock a World of Opportunities</h1>
+        <!-- 
+        <div>
+            <div>
+                <img src="{% static './images/jacom_young_tailor.webp' %}">
+                <img src="{% static './images/jacom_happy_colleagues.webp' %}">
+            </div>
+        </div> -->
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <p>
+                        Welcome to JACOM, where skills meet success! Sign up now to connect with
+                        <br>skilled workers or find clients for your expertise. It's quick, easy, and absolutely free.
+                    </p>
+                </div>
+        
+                <div class="slide">
+                    <p>Why Join JACOM ?</p>
+                    Access a Diverse Talent Pool: Whether you're a client looking for skilled workers or a
+                    professional showcasing your 
+                </div>
+
+                <div class="slide">
+                    talents, our platform offers a wide range of expertise to
+                    choose from.
+                </div>
+
+                <div class="slide">
+                    Streamlined Hiring Process: Find the perfect match for your project without the hassle. Our
+                    user-friendly interface makes the hiring process simple and efficient.
+                </div>
+                    
+                <div class="slide">
+                    Verified Professionals: Rest assured that all skilled workers on our platform are vetted and
+                    verified, ensuring high-quality work and reliable service.
+                </div>
+                    
+                <div class="slide">
+                    Secure Transactions: Your security is our priority. We offer secure payment gateways for
+                    seamless transactions between clients and skilled workers.
+                </div>
+                    
+                
+        
+                <div class="slide">
+                    <p>What Happens Next?</p>
+                    <p>Once you sign up, you can:</p>
+                </div>
+
+                <div class="slide">
+                    Create Your Profile: Build a compelling profile showcasing your skills, experience, and
+                    certifications. Make a strong first impression on potential clients or skilled workers.
+                </div>
+                
+                <div class="slide">
+                    Browse Listings: Clients can explore skilled worker profiles and portfolios, while
+                    professionals can view available projects posted by clients.
+                </div>
+                        
+                <div class="slide">
+                    Start Connecting: Message potential collaborators, discuss project details, negotiate
+                    terms, and get to work!
+                </div>
+                        
+        
+                <!-- <div>
+                    <div>
+                        <img src="{% static './images/jacom_sharing_ideas_women.webp' %}">
+                        <img src="{% static './images/jacom_smile_lady.webp' %}">
+                    </div>
+                </div> -->
+        
+                <div class="slide">
+                    <p>Questions? We're Here to Help!</p>
+                    <p>If you have any questions or need assistance, our support team is ready to assist you.
+                        <br>Contact Support <a href="{% url 'users_accounts:contact' %}">Contact Us</a>
+                    </p>
+                </div>
+            </div>
+            <div class="slide_button">
+                <button class="prev" onclick="moveSlide(-1)">Previous</button>
+                <button class="next" onclick="moveSlide(1)">Next</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

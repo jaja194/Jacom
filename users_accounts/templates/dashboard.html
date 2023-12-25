@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+
+{% for user in user_details %}
+<div class="header">
+    <a href="{% url 'users_accounts:dashboard' %}"><img src="{% static './images/Jacom_logo2.png' %}" height="100px" width="120px"></a>
+    <a href="{% url 'users_accounts:profile' %}" style="margin-left: 1100px; margin-top: 35px;" ><img src="{{user.profile_pictures.url}}" style="border-radius: 200px;" height="40px" width="40px"/></a>
+</div>
+
+<div class="row">
+    <div class="col-3 col-s-3">
+        <div class="aside-2">
+            <h2>Dashboard</h2>
+
+            <button onclick="getLocation()">Get Location</button>
+
+            <div>
+                <h2>Enter location</h2>
+
+                <form>
+                  <label for="location"></label>
+                  <input type="geolocation" id="location" name="location" placeholder="Location">
+                  <input type="submit" onclick="getLocation()" value="Submit">
+                </form>
+            </div>
+
+            <div>
+                <h2>
+                    Account Settings
+                </h2>
+                <p>
+                    Profile Information
+                </p>
+                
+                    
+                    <button><a href="{% url 'users_accounts:profile' %}">View Profile</a></button>
+                    <p>
+                        Account Security
+                    </p>
+                        Password Strength: [Strong/Weak]
+                    <br>
+                    <br>
+                        Two-Factor Authentication: [Enabled/Disabled]
+                    <br>
+                    <br>
+                        Last Login: [Date and time]
+                    <br>
+                    <br>
+                    <button>[Change Password Button]</button>
+            </div>
+
+            <div>
+                <h2>
+                    Payment and Transactions
+                </h2>
+                <p>
+                    Earnings and Payments
+                </p>
+                    Total Earnings: ${{ total_earnings }}
+                    <br>
+                    <br>
+                    Pending Payments: {% for payment in user_pending_payments %} {{ payment.amount }} {% endfor %}
+                    <br>
+                    <br>
+                    Withdrawal Requests: 
+                    <form method="post" action="{% url 'users_accounts:withdrawals' %}">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <br>
+                        <button type="submit">Cashout</button>
+                    </form> {% for request in pending_withdrawal_requests %} {{ request.amount }} {% endfor %}
+            </div>
+
+            <div>
+                <h2>
+                    Help and Support
+                </h2>
+                        <a href="{% url 'users_accounts:faqpage' %}">FAQ:</a>
+                    <br>
+                    <br>
+                        <a href="{% url 'users_accounts:contact' %}">Contact Support:</a>
+                    <br>
+                    <br>
+                        <a href="{% url 'users_accounts:functioning' %}">User Guidelines:</a>
+            </div>
+
+            <div>
+                <h2>
+                    Get Featured
+                </h2>
+                        Boost Your Profile: Increase visibility by becoming a featured skilled worker.
+                    <br>
+                    <br>
+                        Promote Your Project: Highlight your project for increased client attention.
+                <a href="{% url 'users_accounts:about' %}">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6 col-s-6 menu">
+        <ul>
+            <li>
+                <h2>Welcome, {{request.user.username}}</h2>
+                <p>{{user.work_bio}}</p>
+                
+                <div>
+                    <div class="search">
+                        <!-- <form id="searchForm">
+                            <input type="text" id="searchInput" placeholder="Enter your search....">
+                            <button onclick="performSearch()"><a href="{% url 'users_accounts:search' %}">Search</a></button>
+                        </form> -->
+                        <form action="{% url 'users_accounts:search' %}" method="GET">
+                            <input type="text" name="q" placeholder="Search...">
+                            <button type="submit">Search</button>
+                        </form>
+                          
+                          
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <h2>Quick Overview</h2>
+                     <ul>
+                        <br>
+                        <li>Projects in Progress: {{ user.title }} - {{ user.ongoing_jobs_count }}</li>
+                        <br>
+                        <li>Unread Messages: [Number of unread messages]</li>
+                        <br>
+                        <li>Account Status: 
+                            <p>
+                                Verified: {% if user_profile.is_verified %}Yes{% else %}No{% endif %}
+                            </p>
+                            <p>
+                                Active: {% if user_profile.is_active %}Yes{% else %}No{% endif %}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <h2>
+                        Ongoing Projects
+                    </h2>
+                    <ul>
+                        <li>
+                            Project Title: {{ user.title }}
+                        </li>
+                        <li>
+                            Status: {{ user.status }}
+                        </li>
+                        <li>
+                            Client: {{ user.client }}
+                        </li>
+                        <li>
+                            Deadline: {{ user.deadline }}
+                        </li>
+                        <li>
+                            Messages: <!-- Display number of messages -->
+                        </li>
+                    </ul>
+                        <!-- <h3>
+                            [Project Title 2]
+                        </h3>
+                    <ul>
+                        <li>
+                            Status: Waiting for Approval
+                        </li>
+                        <li>
+                            Client: [Client's Name]
+                        </li>
+                        <li>
+                            Deadline: [Project Deadline]
+                        </li>
+                        <li>
+                            Messages: [Number of messages]
+                        </li>
+                    </ul>
+                        <p>
+                            Completed Projects
+                        </p>
+                        <h3>
+                            [Project Title 3]
+                        </h3>
+                    <ul>
+                        <li>
+                            Status: Completed
+                        </li>
+                        <li>
+                            Client: [Client's Name]
+                        </li>
+                        <li>
+                            Feedback: [Rating and feedback]
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>the food</li> -->
+        </ul>
+    </div>
+
+    <div class="col-3 col-s-9">
+        <div class="aside">
+            <img src="{{user.profile_pictures.url}}" style="border-radius: 200px; width: 40px; height: 40px;"/>
+            <ul>
+                <li>
+                    <h3>{{request.user.username}}</h3>
+                </li>
+                <li>
+                    {{user.email}}
+                </li>
+            </ul>
+            <button><a href="{% url 'users_accounts:update' pk=user.id %}">Edit Profile</a></button>
+        </div>
+    </div>
+
+    <div class="col-3 col-s-12">
+        <div class="aside-3">
+            <div>
+                <h2>
+                    Messages
+                </h2>
+                <p>
+                    Recent Messages
+                </p>
+                        [Client's Name]: "Discussing project details."
+                    <br>
+                    <br>
+                        [Skilled Worker's Name]: "Project update and timeline."
+                    <br>
+                    <br>
+                        [Admin]: "Important platform announcement."
+                    <br>
+                    <br>
+                <button>[View All Messages Button]</button>
+            </div>
+
+            <div>
+                <h2>
+                    Notifications
+                </h2>
+                <h3>
+                    [Number] New Notifications
+                </h3>
+                        [Notification 1]
+                    <br>
+                    <br>
+                        [Notification 2]
+                    <br>
+                    <br>
+                        [Notification 3]
+                    <br>
+                    <br>
+                <button>[View All Notifications Button]</button>
+            </div>
+            <h2>Report Problem</h2>
+            <p>
+                <form>
+                    <label>
+                        <input type="email" placeholder="Email....">
+                    </label>
+                    <label>
+                        <input type="number" placeholder="Number....">
+                    </label>
+                    <label>
+                        <input type="text" placeholder="Report Your Problem....">
+                    </label>
+                </form>
+            </p>
+        </div>
+    </div>
+    
+</div>
+
+        <div>
+            <a href="{% url 'users_accounts:logout' %}">Log Out</a>
+        </div>
+{% endfor %}
+
+{% endblock %}

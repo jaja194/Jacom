@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+<div>
+<p>
+    Are you sure you want to delete your Profile
+    <span>{{ delete_user.name }}</span>
+</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">delete</button>
+</form>
+</div>
+{% endblock %}

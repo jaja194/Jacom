@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+{% if request.user.is_authenticated %}
+<div class="profile-container">
+    {% for user in user %}
+    <div class="profile-contents">
+        <div class="profile-image1">
+            <img src="{% static './images/jacom_nature_images.jpg' %}"/>
+        </div>
+        <div class="profile-layout">
+            <h2>My profile</h2>
+            <img src="{{user.profile_pictures.url}}" style="height: 130px; width: 130px; border-radius: 200px;"/>
+        </div>
+    </div>
+
+    <div class="profile-username">
+        <h1>{{user.user}}</h1>
+    </div>
+
+    <div class="profile-dashboardlink">
+        <button><a href="{% url 'users_accounts:dashboard' %}">Dashboard</a></button>
+    </div>
+
+    <div class="profile-information">
+        <div class="profile-details">
+            <h1>Personal Information</h1>
+                <li>
+                    <h3>First Name:</h3> {{user.first_name}}
+                </li>
+                <li>
+                    <h3>Last Name:</h3> {{user.last_name}}
+                </li>
+                <li>
+                    <h3>Email:</h3> {{user.email}}
+                </li>
+                <li>
+                    <h3>Mobile Number</h3> {{user.mobile_number}}
+                </li>
+                <li>
+                    <h3>Gender:</h3> {{user.gender}}
+                </li>
+                <li>
+                    <h3>Date Of Birth:</h3> {{user.dob}}
+                </li>
+        </div>
+    
+       <div class="profile-details">
+        <h1>Professional Summary</h1>
+        <p>
+            <li><h3>Profession: </h3>{{user.title}}</li>
+            <li><h3>Bio: </h3>{{user.work_bio}}</li>
+            <li><h3>Jacom User: </h3>{{user.category}}</li>
+        </p>
+       </div>
+
+       <div class="profile-details">
+        <h1>Profile Update</h1>
+        <button><a href="{% url 'users_accounts:update' pk=user.id %}">Update Profile</a></button>
+        <button><a href="{% url 'users_accounts:delete' pk=user.id %}">Delete Profile</a></button>
+       </div>
+    </div>
+
+
+    {% endfor %}
+    <div class="profile-logout">
+            <button>
+                <a href="{% url 'users_accounts:logout' %}">Log Out</a>
+            </button>
+    </div>
+</div>
+{% else %}
+<p>Unable to access this page</p>
+{% endif %}
+{% endblock %}

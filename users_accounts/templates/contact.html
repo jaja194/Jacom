@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+
+<div class="contact-container">
+
+    <div class="contact-box1">
+        <h1>Contact Us</h1>
+        <p>
+            Have questions, feedback, or need assistance? We're here to help! Feel free to reach out to
+            <br> us using any of the following methods:
+        </p>
+    </div>
+
+    <div class="container-customer">
+        <div class="column-customer1">
+            <h2>Customer Support</h2>
+        <p>
+            Our dedicated customer support team is available to assist you with any inquiries or issues
+            <br>you may have.
+        </p>
+        <p>
+            Email: teamjacom@gmail.com
+            <br>Phone: +234-7068-90-5564
+            <br>Live Chat: Available on our website during business hours
+        </p>
+        </div>
+
+        <div class="column-customer2">
+            <img src="{% static './images/jacom_making_call.jpg' %}">
+        </div>
+
+    </div>
+
+    <div class="business-container">
+
+        <div class="column-business1">
+            <h2>Business Inquiries</h2>
+            <p>
+                For business-related inquiries, partnerships, or collaboration opportunities,
+                <br>please contact our team at:
+                <br>
+                Email: jacombusiness@gmail.com
+                <br>Phone: +234-7068-90-5564
+            </p>
+        </div>
+    
+        <div class="column-business1">
+            <h2>Technical Support</h2>
+            <p>
+                If you are experiencing technical issues or need technical assistance,
+                <br>please contact our technical support team at:
+                <br>
+                Email: techsupportjacom@gmail.com
+                <br>Phone: +234-7068-90-5564
+            </p>
+        </div>
+    
+        <div class="column-business1">
+            <h2>Address</h2>
+            <p>
+                Visit us at our office:
+                <br>
+                <br>Jacom
+                <br>54 road 4 house 6,
+                <br>FCT Abuja Lokogoma
+                <br>Nigeria
+            </p>
+        </div>
+    
+        <div class="column-business1">
+            <h2>Social Media</h2>
+            <p>
+                Connect with us on social media for updates, news, and more:
+                <br>
+                <br>
+                <li>Facebook: @Jacom Connect</li>
+                <li>Twitter: @Jacom_connect</li>
+                <li>LinkedIn: Connect Jacom</li>
+                <li>Instagram: @Jacomconnect29</li>
+            </p>
+            <!-- <div>
+                <img src="{% static './images/jacom_group_metting.jpg' %}">
+            </div> -->
+        </div>
+    
+        <div class="column-business1">
+            <h2>Feedback</h2>
+            <p>
+                We value your feedback! If you have any suggestions, comments, or ideas to share,
+                <br>please email us at feedbackjacom@gmail.com.
+            </p>
+
+            <div>
+                <img src="{% static './images/jacom_group_meeting2.jpg' %}">
+            </div>
+        </div>
+    
+        <div class="column-business1">
+            <h2>Stay Connected</h2>
+            <p>
+                Subscribe to our newsletter to stay updated on the latest news, special offers,
+                <br>and tips from JACOM. Enter your email address below to subscribe:
+                <br>
+                <input type="text" placeholder="Email Address">
+            </p>
+            <div>
+                <img src="{% static './images/jacom_ai_view.jpg' %}">
+            </div>
+        </div>
+
+        <div class="column-business1">
+            <div class="appreciatetion">
+                <p>
+                    Thank you for choosing JACOM for finding the right professional to hire for your job.
+                    <br>We appreciate your trust in us, and we're here to make your experience
+                    <br>exceptional.
+                    <br>
+                    <br>Warm regards,
+                    <br>
+                    Leroy
+                    <br>Founder, Agu Onyedikachi
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}

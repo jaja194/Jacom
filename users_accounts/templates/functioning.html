@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<div class="functioning-body">
+
+    <div class="functioning-header">
+        <h1>How It Works</h1>
+        <p>
+            Welcome to Jacom, where skilled workers and clients come together to
+            <br>collaborate and create amazing projects. Here's how our platform works in just a few
+            <br>simple steps:
+        </p>
+    </div>
+
+    <div class="function-images">
+        <div class="function-image1"><img src="{% static './images/jacom_how_it_work1.jpg' %}"></div>
+        <div class="function-image2"><img src="{% static './images/jacom_how_it_work2.jpg' %}"></div>
+        <div class="function-image3"><img src="{% static './images/jacom_how_it_work5.jpg' %}"></div>
+        <!-- <div class="function-image4"><img src="{% static './images/jacom_how_it_work6.jpg' %}"></div> -->
+    </div>
+
+    <div class="functioning-section">
+            <div>
+                <h2>
+                    Sign Up and Create Your Profile
+                </h2>
+                <p>
+                    <p>For Skilled Workers:</p>
+                    
+                        Create an Account: Sign up for free and create a detailed profile showcasing your skills,
+                        <br>experience, certifications, and portfolio.
+                    <br>
+                    <br>
+                        Highlight Your Expertise: Showcase your talents and describe the services you offer. The
+                        <br>more detailed your profile, the better chances of attracting clients.
+                    
+                    <p>
+                        For Clients:
+                    </p>
+
+                        Register Your Account: Sign up to post your projects and find the perfect skilled worker for
+                        <br>your needs.
+                    <br>
+                    <br>
+                        Project Description: Provide a clear description of your project, including requirements,
+                        <br>budget, and timeline.
+                    
+                </p>
+            </div>
+
+            <div>
+                <h2>
+                    Browse Profiles and Projects
+                </h2>
+                <p>
+                    <p>For Skilled Workers:</p>
+                        Explore Projects: Browse through client projects posted on our platform. Find projects that
+                        <br>match your skills and interests.
+                    <br>
+                    <br>
+                        Initiate Contact: Reach out to clients by sending personalized messages expressing your
+                        <br>interest and suitability for their project.
+                    <p>
+                        For Clients:
+                    </p>
+                        Search Skilled Workers: Use our search filters to find skilled workers based on skills,
+                        <br>location, ratings, and more.
+                    <br>
+                    <br>
+                        Review Profiles: View detailed profiles of skilled workers. Check their portfolios, ratings,
+                        <br>and reviews from previous clients.
+                </p>
+            </div>
+            <!-- 
+            <div>
+                <img src="{% static './images/jacom_how_it_work3.jpg' %}">
+                <img src="{% static './images/jacom_how_it_work4.jpg' %}">
+            </div> -->
+
+            <div>
+                <h2>Collaborate and Communicate</h2>
+                        Open Communication: Once connected, use our messaging system to discuss project
+                        <br>details, clarify requirements, and negotiate terms.
+                    <br>
+                    <br>
+                        Set Expectations: Clearly define project milestones, deadlines, and payment terms to avoid
+                        <br>any misunderstandings during the collaboration.
+            </div>
+    </div>
+
+    <div class="functioning-section2">
+        <div class="section2-content">
+            <h2>
+                Get the Job Done
+            </h2>
+            <p>
+                <p>For Skilled Workers:</p>
+                        Deliver High-Quality Work: Complete the project to the best of your abilities. Provide
+                        <br>regular updates to the client and seek feedback.
+                    <br>
+                    <br>
+                    <p>
+                        For Clients:
+                    </p>
+                        Review Work: Review the work submitted by the skilled worker. Provide feedback and
+                        <br>suggest revisions if necessary.
+                    <br>
+                    <br>
+                        Release Payment: Once satisfied with the work, release the payment to the skilled worker
+                        <br>through our secure payment system.
+            </p>
+        
+            <h2>
+                Leave Feedback and Ratings
+            </h2>
+            <p>
+                Rate Your Experience: After completing a project, both clients and skilled workers can
+                <br>leave feedback and ratings for each other. This helps build trust within our community.
+            </p>
+        
+            <h2>
+                Build Long-Term Relationships
+            </h2>
+            <p>
+                        Repeat Business: For skilled workers, deliver exceptional work to encourage clients to hire
+                        <br>you for future projects.
+                    <br>
+                    <br>
+                        Find Reliable Talent: For clients, build relationships with skilled workers you trust
+                        <br>for ongoing collaborations.
+            </p>
+        </div>
+        <div class="functioning-section2-images">
+            <div class="function-sec2-img1"><img src="{% static './images/jacom_how_it_work7.jpg' %}"></div>
+            <div class="function-sec2-img2"><img src="{% static './images/jacom_how_it_work8.jpg' %}"></div>
+        </div>
+    </div>
+
+
+    <div class="functioning-section3">
+        <p>
+            Ready to get started? Join JACOM today and embark on a journey of creativity,
+            <br>collaboration, and success!
+        </p>
+        <a href="{% url 'users_accounts:signup' %}">Get Started</a>
+    </div>
+
+</div>
+{% include 'footer.html' %}
+{% endblock %}

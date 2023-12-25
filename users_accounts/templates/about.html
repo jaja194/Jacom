@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contents %}
+<div class="about_body">
+
+    <div class="container-about">
+        <div class="about-grid1">
+            <div class="about-image1">
+                <img src="{% static './images/jacom_man_stand.jpg' %}">
+            </div>
+            <div class="text-overlay-about-content1">
+                <h1>About Us</h1>
+                <p>
+                    Welcome to JACOM, where talent meets opportunity! We are passionate about
+                    <br>connecting skilled workers with clients, creating meaningful collaborations, and fostering
+                    <br>a community built on trust, reliability, and expertise.
+                </p>
+            </div>
+        
+            <div class="text-overlay-about-content2">
+                <h1>Our Vision</h1>
+                <p>
+                    At JACOM, we envision a world where every skilled individual can showcase 
+                    <br>their talents and every client can find the perfect expert for their needs. We believe 
+                    <br>in empowering professionals to thrive while helping businesses and individuals accomplish
+                    <br>their goals effortlessly.
+                </p>
+            </div>
+
+            <div class="about-image2">
+                <img src="{% static './images/jacom_ladys_talking.jpg' %}">
+            </div>
+            <div class="text-overlay-about-content3">
+                <h1>
+                    Have questions?
+                    <br> we are here to help you
+                </h1>
+                <button><a href="{% url 'users_accounts:contact' %}">Contact Support</a></button>
+            </div>
+            <div class="text-overlay-about-content7">
+                <h1>
+                    WE CREATE THE IDEAS THAT HELP OUR CLIENTS.
+                </h1>
+                <P>
+                    Stay connected with Jacom and monitor how our skilled workers do
+                    <br> your job for you. unluck the world of opportunities with Jacom.
+                </P>
+            </div>
+        </div>
+    
+        <div class="about-grid2">
+            <h1>OUR TEAM</h1>
+            <hr style="border-top: 2px rgb(174, 217, 235);">
+            <div class="about-image3">
+                <div class="about-box1">
+                    <img src="{% static './images/jacom_man_our_team.jpg' %}">
+                    <h3>LEROY AGU</h3>
+                    <p>Project Strategy Developer</p>
+                </div>
+
+                <div class="about-box1">
+                    <img src="{% static './images/jacom_woman_our_team.jpg' %}">
+                    <h3>MONICA MARGIE</h3>
+                    <p>Marketing Strategist</p>
+                </div>
+
+                <div class="about-box1">
+                    <img src="{% static './images/jacom_woman_out_team2.jpg' %}">
+                    <h3>JULIAN ARRONS</h3>
+                    <p>Social Media Manager</p>
+                </div>
+
+            </div>
+
+            <div class="about-image4">
+                <img src="{% static './images/jacom_man_woman_inspection.jpg' %}">
+            </div>
+            <div class="text-overlay-about-content4">
+                <h1>Our Mission</h1>
+                <p>
+                    Our mission is to simplify the process of finding skilled workers for clients and providing
+                    <br>opportunities for talented individuals to showcase their expertise. We are dedicated to
+                    <br> building a platform that not only matches skills with requirements but also nurtures 
+                    <br>long-term relationships based on mutual respect and satisfaction.
+                </p>
+            </div>
+        
+            <div class="text-overlay-about-content5">
+                <h1>What Sets Us Apart</h1>
+
+                <div class="container-difference">
+                    <div class="content5-box1">
+                        <p>
+                            <h3>1. Expertise at Your Fingertips:</h3>
+                            <br>
+                            We curate a diverse pool of skilled workers, ranging from artisans and craftsmen to
+                            <br>professionals in IT, design, marketing, and more. Whatever your requirement, we have 
+                            <br>the expertise you seek.
+                        </p>
+                    </div>
+                    
+                    <div class="content5-box1">
+                        <p>
+                            <h3>2. Seamless Connections:</h3>
+                            <br>
+                            Our platform offers a user-friendly interface that makes it easy for clients to find the right
+                            <br>skilled worker and for professionals to showcase their talents. We streamline the process,
+                            <br>saving you time and effort.
+                        </p>
+                    </div>
+                    
+                    <div class="content5-box1">
+                        <p class="content5-box1">
+                            <h3>3. Trust and Reliability:</h3>
+                            <br>
+                            We understand the importance of trust in any collaboration. That's why we thoroughly vet all
+                            <br>our skilled workers, ensuring they meet the highest standards of professionalism and
+                            <br>expertise. Clients can rest assured that they are hiring the best in the business.
+                        </p>
+                    </div>
+                    
+                    <div class="content5-box1">
+                        <p>
+                            <h3>4. Personalized Support:</h3>
+                            <br>
+                            We are more than just a platform; we are your partners in success. Our dedicated support
+                            <br>team is always ready to assist you, whether you need help finding the right professional or
+                            <br>resolving any issues that may arise during your collaboration.
+                        </p>
+                    </div>   
+                </div>
+                <hr style="border-top: 2px rgb(174, 217, 235);">
+
+                <div class="about-image5">
+                    <img src="{% static './images/jacom_group_meeting2.jpg' %}">
+                </div>
+                <div class="text-overlay-about-content6">
+                    <p>
+                        <h1>Join Us in Building a Brighter Future</h1>
+                        <br>
+                        Whether you are a skilled worker looking for exciting opportunities or a client in need of
+                        <br>expert services, JACOM the bridge that connects aspirations with
+                        <br>accomplishments. Join us today and become a part of a thriving community where skills are
+                        <br>valued, opportunities are limitless, and success knows no bounds.
+                        <br>
+                        <br>Thank you for considering JACOM for your professional needs. We look
+                        <br> forward to serving you and helping you achieve your goals.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}
